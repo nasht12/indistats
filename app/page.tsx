@@ -1,11 +1,12 @@
-import { NavigationMenuDemo2 } from '@/components/nav2'
-import { NavigationMenuDemo } from '@/components/navigation-menu-demo'
+"use client";
+import GDPChart from '@/components/gdpchart'
 
 export default function Home() {
   return (
     <div>
-      <NavigationMenuDemo />
-      {/* <NavigationMenuDemo2 /> */}
+      <div className='w-1/4'>
+      <GDPChart />
+      </div>
       </div>
   )
 }
