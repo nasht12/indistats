@@ -59,7 +59,7 @@ export function NavigationMenuDemo() {
   return (
     <NavigationMenu className="bg-blue-50 min-w-full flex" onValueChange={setValue}>
 
-       <div className="flex items-center justify-center m-5 pr-10 font-bold text-lg border-4 h-10 border-hidden border-blue-200 rounded-md hover:bg-black hover:text-white">
+       <div className="flex items-center justify-center m-5 pr-10 font-bold text-lg border-4 h-10 cursor-pointer border-hidden border-blue-200 rounded-md hover:bg-black hover:text-white">
           <Link href="/" legacyBehavior passHref>
             <p className="ml-8">
             India Stats
