@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import InflationChart from "@/components/inflationchart";
+import LineChart from "@/components/line-chart";
 
 const InflationPage: React.FC = () => {
   const inflationData = [
@@ -139,9 +139,9 @@ const InflationPage: React.FC = () => {
   return (
     <div>
       <h1>Inflation Data Visualization</h1>
-      <InflationChart data={inflationData} />
+      <LineChart data={inflationData} field={"Inflation"} />
       <h1>Consumer Price Index Data Visualization</h1>
-      <InflationChart data={consumerPriceIndexData} />
+      <LineChart data={consumerPriceIndexData} field={"Inflation"} />
     </div>
   );
 };

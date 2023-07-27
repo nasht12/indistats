@@ -7,9 +7,10 @@ interface InflationtData {
 
 interface InflationChartProps {
   data: InflationtData[];
+  field: string;
 }
 
-const InflationChart: React.FC<InflationChartProps> = ({ data}) => {
+const LineChart: React.FC<InflationChartProps> = ({ data, field }) => {
   const chartRef = useRef<Chart | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   
@@ -36,7 +37,7 @@ const InflationChart: React.FC<InflationChartProps> = ({ data}) => {
         labels: years,
         datasets: [
           {
-            label: "Inflation",
+            label: `${field}`,
             data: unemploymentValues,
             backgroundColor: "rgba(75, 192, 192, 0.2)",
             borderColor: "rgba(75, 192, 192, 1)",
@@ -58,7 +59,7 @@ const InflationChart: React.FC<InflationChartProps> = ({ data}) => {
           y: {
             title: {
               display: true,
-              text: "Inflation",
+              text: `${field}`,
             },
           },
         },
@@ -78,4 +79,4 @@ const InflationChart: React.FC<InflationChartProps> = ({ data}) => {
   );
 };
 
-export default InflationChart;
+export default LineChart;
