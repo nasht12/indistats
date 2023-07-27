@@ -58,14 +58,15 @@ export function NavigationMenuDemo() {
   const [list, setList] = React.useState<HTMLElement | null>(null);
   return (
     <NavigationMenu className="bg-blue-50 min-w-full flex" onValueChange={setValue}>
-      <NavigationMenuList ref={setList} className="menu-list flex justify-start">
-        <NavigationMenuItem className="text-left">
+
+       <div className="flex items-center justify-center m-5 pr-10 font-bold text-lg border-4 h-10 border-hidden border-blue-200 rounded-md hover:bg-black hover:text-white">
           <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              India Stats
-            </NavigationMenuLink>
+            <p className="ml-8">
+            India Stats
+            </p>
           </Link>
-        </NavigationMenuItem>
+         </div>
+      <NavigationMenuList ref={setList} className="menu-list flex justify-start">
         <NavigationMenuItem>
           <NavigationMenuTrigger>Topics</NavigationMenuTrigger>
           <NavigationMenuContent className="">
