@@ -1,16 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import { Chart, ChartConfiguration } from "chart.js/auto";
 
-interface InflationtData {
-  [year: string]: number;
+interface ChartData {
+  [year: string]: any;
 }
 
-interface InflationChartProps {
-  data: InflationtData[];
+interface ChartProps {
+  data: ChartData[];
   field: string;
 }
 
-const LineChart: React.FC<InflationChartProps> = ({ data, field }) => {
+const LineChart: React.FC<ChartProps> = ({ data, field }) => {
   const chartRef = useRef<Chart | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   
@@ -27,7 +27,7 @@ const LineChart: React.FC<InflationChartProps> = ({ data, field }) => {
     }
   }, [data]);
 
-  function formatChartData(data: InflationtData[]): ChartConfiguration {
+  function formatChartData(data: ChartData[]): ChartConfiguration {
     const years = Object.keys(data[0]);
     const unemploymentValues = years.map((year) => data[0][year]);
 

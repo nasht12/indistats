@@ -1,22 +1,14 @@
 "use client";
 import React from "react";
-import PopulationChart from "../../components/populationchart";
+import LineChart from "@/components/line-chart";
 
 interface PopulationData {
   [key: string]: any;
 }
 
-interface PopulationPageProps {
-  populationData: PopulationData[];
-}
-
-const PopulationPage: React.FC<PopulationPageProps> = () => {
+const PopulationPage: React.FC = () => {
   const populationData: PopulationData[] = [
     {
-      "Country Name": "India",
-      "Country Code": "IND",
-      "Indicator Name": "Population, total",
-      "Indicator Code": "SP.POP.TOTL",
       "1990": 870452165.0,
       "1991": 888941756.0,
       "1992": 907574049.0,
@@ -55,7 +47,7 @@ const PopulationPage: React.FC<PopulationPageProps> = () => {
   return (
     <div>
       <h1>Population Data Visualization</h1>
-      {populationData && <PopulationChart data={populationData} />}
+      {populationData && <LineChart data={populationData} field="Population"/>}
     </div>
   );
 };
