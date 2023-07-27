@@ -81,7 +81,7 @@ export function NavigationMenuDemo() {
                       India Stats
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                      Exploration of data relevant to India's government,
+                      Exploration of data relevant to India&apos;s government,
                       economy, and society.
                     </p>
                   </a>

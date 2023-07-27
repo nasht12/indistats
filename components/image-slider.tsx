@@ -2,16 +2,13 @@ import React, { useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
-function App() {
+const ImageSlider = () => {
   const slides = [
     {
+        url: 'https://images.unsplash.com/photo-1579531403068-8d6fd2b3f45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1112&q=80',
+      },
+    {
       url: 'https://images.unsplash.com/photo-1546722228-7baeca4bd0b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1579531403068-8d6fd2b3f45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1112&q=80',
-    },
-    {
-      url: 'https://plus.unsplash.com/premium_photo-1661963573455-ba0446e2cab9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
     },
     {
       url: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
@@ -72,4 +69,4 @@ function App() {
   );
 }
 
-export default App;
+export default ImageSlider;
